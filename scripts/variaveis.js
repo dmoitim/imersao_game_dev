@@ -7,6 +7,7 @@ let imagemGameOver;
 let imagemTelaInicial;
 let fonteTelaInicial;
 let botaoGerenciador;
+let imagemVida;
 let pontuacao;
 let cenario;
 let somDoJogo;
@@ -16,6 +17,8 @@ let jogo;
 let cenaAtual = 'telaInicial';
 let cenas;
 let telaInicial;
+let vida;
+let fita;
 const inimigos = [];
 
 const matrizInimigo = [

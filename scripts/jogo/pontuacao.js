@@ -1,6 +1,7 @@
 class Pontuacao {
     constructor() {
         this.pontos = 0;
+        this.jaGanhouVida = false;
     }
 
     exibe() {
@@ -12,5 +13,14 @@ class Pontuacao {
 
     adicionarPonto() {
         this.pontos = this.pontos + 0.2;
+
+        if (this.pontos > 1 && (parseInt(this.pontos) % 50) === 0) {
+            if (!this.jaGanhouVida) {
+                vida.ganhaVida();
+                this.jaGanhouVida = true;
+            }
+        } else {
+            this.jaGanhouVida = false;
+        }
     }
 }
